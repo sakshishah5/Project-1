@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /*v Hides horizontal overflow, preventing content from extending beyond the container's width.*/
+    overflow-y: auto; /*Enables a vertical scrollbar when content overflows vertically, allowing users to scroll up and down.*/
+    perspective: 10px; /*adds a slight 3D effect, making objects in the container look subtly three-dimensional.*/
+}
+
+.container{
+    position: relative;  /*after this we want to put images in absolute position*/
+    display: flex;
+    justify-content: center; /*This centers the child elements horizontally within the flex container.*/
+    align-items: center; /*This centers the child elements vertically within the flex container.*/
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1; /* it determines whether an element is in front of or behind other elements on the page. An element with a lower z-index value is "under" elements with higher values.*/
+    
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+    color: white;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.img1{
+    transform: translateZ(-40px) scale(5); /*This line applies a 3D transformation to "img1," pushing it back in the z-axis by 40 pixels (translateZ) and scaling it by a factor of 5. This creates a visual effect of the image appearing smaller and further away.*/
+}
+
+.img2{
+    transform:translateZ(-20px) scale(3);
+}
+
+.img1, .img2{
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100vw;
+    z-index: -1; 
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+    box-sizing: border-box;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.Text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100vw 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.desk{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
